@@ -4,7 +4,7 @@ const Rating = ({ rate }) => {
   let lenght = 5;
   const numbers = Array.from({ length: lenght }, (_, i) => i + 1); // Changing the array to a range of numbers from 1 to 5
 
-  const currentRate = rate.toFixed(0);
+  const currentRate = parseInt(rate).toFixed(0);
 
 //   const stars = [];
 

@@ -1,7 +1,10 @@
 import "./index.css";
 import { createRoot } from "react-dom/client";
 import { createElement } from "react";
-import App from "./app";
+import App from "./App";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import router from "./routes/router";
+
 
 // const categories = [
 //   "electronics",
@@ -9,7 +12,8 @@ import App from "./app";
 //   "men's clothing",
 //   "women's clothing",
 // ];
-// const root = document.querySelector("#root");
+const root = document.querySelector("#root");
+// createRoot(root).render(App());
 
 // const app = createElement(
 //   "div",
@@ -18,7 +22,6 @@ import App from "./app";
 //   createElement("div", null, categories.map((category) => createElement("button", {className: "border border-black px-4 py-2 me-2"}, category)))
 // );
 
-createRoot(root).render(App());
 
 // const title = document.createElement("p");
 // title.innerText = "Product Categories";
@@ -33,3 +36,11 @@ createRoot(root).render(App());
 
 // root.append(title);
 // categories.forEach((category) => root.append(categoryBtn(category)));
+
+
+// ==============================
+// React Router Dom
+// router ဆိုတာ ကိုယ့်မှာဘာ pages တွေရှိလဲဆိုတာပြ
+
+createRoot(root).render(<RouterProvider router={router} />);
+// ==============================
