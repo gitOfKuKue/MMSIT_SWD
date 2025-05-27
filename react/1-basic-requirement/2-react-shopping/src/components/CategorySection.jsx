@@ -1,6 +1,6 @@
 import React from "react";
-import CategoryButon from "./CategoryButon";
 import Container from "./Container";
+import CategoryButton from "./CategoryButton";
 
 const CategorySection = () => {
   const title = "Product Cateogies";
@@ -17,9 +17,9 @@ const CategorySection = () => {
       <Container>
         <p className="text-sm text-gray-500 mb-2">{title}</p>
         <div className="flex overflow-scroll hide-scrollbar">
-          <CategoryButon key="all" categoryName="All" current={true} />
+          <CategoryButton key="all" categoryName="All" current={true} />
           {categories.map((category) => (
-            <CategoryButon
+            <CategoryButton
               key={category}
               categoryName={category}
               current={false}
